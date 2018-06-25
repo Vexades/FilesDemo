@@ -1,7 +1,9 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.Serializable;
+import java.util.List;
 
 public class Main  {
     public static void main(String[] args) {
@@ -44,12 +46,12 @@ public class Main  {
                     }
                 if(obj.equals(widgets.retrievePerson)){
                     Deserialisation des = new Deserialisation();
-                    des.retrageDinBaza(Singleton.getInstance().getListaPersoane());
-                    for(Person p: Singleton.getInstance().getListaPersoane()){
+                    List<Person> person = des.retrageDinBaza(Singleton.getInstance().getListaPersoane());
+                    for(Person p: person){
                         System.out.println(p.toString());
                     }
                 }
-                }
+            }
             };
         widgets.addPerson.setListener(listener);
         widgets.retrievePerson.setListener(listener);
