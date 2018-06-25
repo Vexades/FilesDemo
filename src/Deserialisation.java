@@ -15,6 +15,8 @@ public class Deserialisation  {
         }catch (IOException e) {
             e.printStackTrace();
             return;
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }

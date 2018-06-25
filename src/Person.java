@@ -38,8 +38,6 @@ public class Person implements Serializable {
         this.index = index;
     }
 
-
-
     @Override
     public String toString(){
         return "\n" + " "+ index + " " +firstName + " " + lastName + " " + age;

@@ -13,6 +13,4 @@ public class Fields extends JTextField {
         this.height = height;
         setBounds(x,y,width,height);
     }
-
-
 }
