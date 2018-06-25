@@ -35,9 +35,9 @@ public class Main  {
                     Serialisation ser = new Serialisation();
                     System.out.println("Adding");
                     if(!(widgets.firstName.getText().isEmpty() || widgets.lastName.getText().isEmpty() || widgets.age.getText().isEmpty())){
-                        person.setFirstName(String.valueOf(widgets.firstName));
-                        person.setLastName(String.valueOf(widgets.lastName));
-                        person.setAge(String.valueOf(widgets.age));
+                        person.setFirstName(String.valueOf(widgets.firstName.getText()));
+                        person.setLastName(String.valueOf(widgets.lastName.getText()));
+                        person.setAge(String.valueOf(widgets.age.getText()));
                         Singleton.getInstance().listaPersoane.add(person);
                         ser.adaugaInBaza(Singleton.getInstance().getListaPersoane());
                     }else {
